@@ -1,3 +1,7 @@
+# Disclaimer
+This is an unofficial fork of https://github.com/RenegadeLucien/project-tenacity
+My goal is to fix existing bugs without having to make branches on a public repo.
+
 # About Project Tenacity
 Project Tenacity is a dynamic account pathing system for RuneScape 3. Its goal is to provide RS3 players with a powerful, easy-to-use tool to determine the optimal method to progress their account. This tool serves as a replacement and upgrade to my former attempts at making this type of guide, namely my "Level 3 to Quest Cape" and "Level 3 to All Capes" Reddit guides from several years ago.
 
