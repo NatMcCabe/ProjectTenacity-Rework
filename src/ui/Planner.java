@@ -1,11 +1,6 @@
 package ui;
 
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-import com.google.gson.JsonArray;
-import com.google.gson.JsonElement;
-import com.google.gson.JsonObject;
-import com.google.gson.JsonParser;
+import com.google.gson.*;
 import data.databases.AchievementDatabase;
 import data.databases.ArmourDatabase;
 import data.databases.WeaponDatabase;
@@ -25,21 +20,8 @@ import javafx.concurrent.Task;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.Scene;
-import javafx.scene.control.Alert;
+import javafx.scene.control.*;
 import javafx.scene.control.Alert.AlertType;
-import javafx.scene.control.Button;
-import javafx.scene.control.CheckBox;
-import javafx.scene.control.ComboBox;
-import javafx.scene.control.ProgressBar;
-import javafx.scene.control.RadioButton;
-import javafx.scene.control.SelectionMode;
-import javafx.scene.control.Tab;
-import javafx.scene.control.TabPane;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableRow;
-import javafx.scene.control.TableView;
-import javafx.scene.control.TextField;
-import javafx.scene.control.ToggleGroup;
 import javafx.scene.control.cell.TextFieldTableCell;
 import javafx.scene.input.MouseButton;
 import javafx.scene.layout.Pane;
@@ -48,12 +30,7 @@ import javafx.scene.transform.Scale;
 import javafx.stage.Stage;
 import javafx.util.Callback;
 import javafx.util.StringConverter;
-import logic.GoalResults;
-import logic.Lamp;
-import logic.LevelHelper;
-import logic.Player;
-import logic.PriceFetcher;
-import logic.Reward;
+import logic.*;
 
 import java.io.File;
 import java.io.FileReader;
@@ -65,14 +42,8 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.nio.file.attribute.BasicFileAttributeView;
 import java.text.DecimalFormat;
-import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.util.Map.Entry;
-import java.util.Scanner;
 import java.util.stream.Collectors;
 
 public class Planner extends Application {
@@ -906,7 +877,7 @@ public class Planner extends Application {
         root.getChildren().add(backButton);
     }
 
-    private void getPlayerXp(Player player) {
+    void getPlayerXp(Player player) {
         String alteredName = player.getName().replace(' ', '_');
         Scanner runeMetricsSkillScanner;
         try {
@@ -931,7 +902,7 @@ public class Planner extends Application {
         }
     }
 
-    private void getPlayerQuests(Player player) {
+    void getPlayerQuests(Player player) {
         String alteredName = player.getName().replace(' ', '_');
         Scanner runeMetricsQuestScanner;
         try {

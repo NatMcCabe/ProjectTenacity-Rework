@@ -3,20 +3,15 @@ package data.databases;
 import data.dataobjects.Weapon;
 import logic.Requirement;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.LinkedHashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 
 public class WeaponDatabase {
 
     private static WeaponDatabase weaponDatabase;
 
-    private List<Weapon> weapons = new ArrayList<>();
-    private Map<String, Weapon> namedWeapons = new LinkedHashMap<>();
+    private final List<Weapon> weapons = new ArrayList<>();
+    private final Map<String, Weapon> namedWeapons = new LinkedHashMap<>();
 
     private WeaponDatabase() {addWeapons();}
 
@@ -373,6 +368,37 @@ public class WeaponDatabase {
         weapons.add(new Weapon("Obliteration", "Magic", "Magic", "Two-handed", 0, 2287, 6, 1944, 0, 0, Collections.singletonList(new Requirement("Magic", 87))));
         weapons.add(new Weapon("Noxious staff", "Magic", "Magic", "Two-handed", 0, 2458, 6, 2012, 0, 0, Collections.singletonList(new Requirement("Magic", 90))));
         weapons.add(new Weapon("Staff of Sliske", "Magic", "Magic", "Two-handed", 0, 2577, 6, 2056, 0, 0, Collections.singletonList(new Requirement("Magic", 92))));
+
+        // Necromancy
+        weapons.add(new Weapon("Death guard (tier 10)", "Necromancy", "Necromancy", "Main-hand", 96, 202, 3, 0, 0, 0, Collections.singletonList(new Requirement("Necromancy", 1))));
+        weapons.add(new Weapon("Skull lantern (tier 10)", "Necromancy", "Necromancy", "Off-hand", 0, 202, 3, 0, 0, 0, Collections.singletonList(new Requirement("Necromancy", 1))));
+
+        weapons.add(new Weapon("Death guard (tier 20)", "Necromancy", "Necromancy", "Main-hand", 192, 316, 3, 0, 0, 0, Collections.singletonList(new Requirement("Necromancy", 20))));
+        weapons.add(new Weapon("Skull lantern (tier 20)", "Necromancy", "Necromancy", "Off-hand", 0, 316, 3, 0, 0, 0, Collections.singletonList(new Requirement("Necromancy", 20))));
+
+        weapons.add(new Weapon("Death guard (tier 30)", "Necromancy", "Necromancy", "Main-hand", 288, 454, 3, 0, 0, 0, Collections.singletonList(new Requirement("Necromancy", 30))));
+        weapons.add(new Weapon("Skull lantern (tier 30)", "Necromancy", "Necromancy", "Off-hand", 0, 454, 3, 0, 0, 0, Collections.singletonList(new Requirement("Necromancy", 30))));
+
+        weapons.add(new Weapon("Death guard (tier 40)", "Necromancy", "Necromancy", "Main-hand", 384, 628, 3, 0, 0, 0, Collections.singletonList(new Requirement("Necromancy", 40))));
+        weapons.add(new Weapon("Skull lantern (tier 40)", "Necromancy", "Necromancy", "Off-hand", 0, 628, 3, 0, 0, 0, Collections.singletonList(new Requirement("Necromancy", 40))));
+
+        weapons.add(new Weapon("Death guard (tier 50)", "Necromancy", "Necromancy", "Main-hand", 480, 850, 3, 0, 0, 0, Collections.singletonList(new Requirement("Necromancy", 50))));
+        weapons.add(new Weapon("Skull lantern (tier 50)", "Necromancy", "Necromancy", "Off-hand", 0, 850, 3, 0, 0, 0, Collections.singletonList(new Requirement("Necromancy", 50))));
+
+        weapons.add(new Weapon("Death guard (tier 60)", "Necromancy", "Necromancy", "Main-hand", 576, 1132, 3, 0, 0, 0, Collections.singletonList(new Requirement("Necromancy", 60))));
+        weapons.add(new Weapon("Skull lantern (tier 60)", "Necromancy", "Necromancy", "Off-hand", 0, 1132, 3, 0, 0, 0, Collections.singletonList(new Requirement("Necromancy", 60))));
+
+        weapons.add(new Weapon("Death guard (tier 70)", "Necromancy", "Necromancy", "Main-hand", 672, 1486, 3, 0, 0, 0, Collections.singletonList(new Requirement("Necromancy", 70))));
+        weapons.add(new Weapon("Skull lantern (tier 70)", "Necromancy", "Necromancy", "Off-hand", 0, 1486, 3, 0, 0, 0, Collections.singletonList(new Requirement("Necromancy", 70))));
+
+        weapons.add(new Weapon("Death guard (tier 80)", "Necromancy", "Necromancy", "Main-hand", 768, 1924, 3, 0, 0, 0, Collections.singletonList(new Requirement("Necromancy", 80))));
+        weapons.add(new Weapon("Skull lantern (tier 80)", "Necromancy", "Necromancy", "Off-hand", 0, 1924, 3, 0, 0, 0, Collections.singletonList(new Requirement("Necromancy", 80))));
+
+        weapons.add(new Weapon("Death guard (tier 90)", "Necromancy", "Necromancy", "Main-hand", 864, 2458, 3, 0, 0, 0, Collections.singletonList(new Requirement("Necromancy", 90))));
+        weapons.add(new Weapon("Skull lantern (tier 90)", "Necromancy", "Necromancy", "Off-hand", 0, 2458, 3, 0, 0, 0, Collections.singletonList(new Requirement("Necromancy", 90))));
+
+        weapons.add(new Weapon("Omni guard", "Necromancy", "Necromancy", "Main-hand", 912, 2765, 3, 0, 0, 0, Collections.singletonList(new Requirement("Necromancy", 95))));
+        weapons.add(new Weapon("Soulbound lantern", "Necromancy", "Necromancy", "Off-hand", 0, 2765, 3, 0, 0, 0, Collections.singletonList(new Requirement("Necromancy", 95))));
 
         for (Weapon weapon : weapons) {
             namedWeapons.put(weapon.getName(), weapon);

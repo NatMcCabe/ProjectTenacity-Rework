@@ -3,12 +3,7 @@ package data.databases;
 import data.dataobjects.Armour;
 import logic.Requirement;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.LinkedHashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 
 public class ArmourDatabase {
@@ -94,7 +89,10 @@ public class ArmourDatabase {
         armours.add(new Armour("Sirenic mask", "Ranged", "Head", 435, 0, 2, 0, 23, Collections.singletonList(new Requirement("Defence", 90))));
         armours.add(new Armour("Elite sirenic mask", "Ranged", "Head", 457, 0, 2, 0, 24, Collections.singletonList(new Requirement("Defence", 92))));
 
-        //All/hybrid head
+        //All/hybrid
+        armours.add(new Armour("Anima core helm of Sliske", "All", "Head", 259, 0, 0, 0, 0, Collections.singletonList(new Requirement("Defence", 80))));
+        armours.add(new Armour("Anima core body of Sliske", "All", "Head", 298, 0, 0, 0, 0, Collections.singletonList(new Requirement("Defence", 80))));
+        armours.add(new Armour("Anima core legs of Sliske", "All", "Head", 285, 0, 0, 0, 0, Collections.singletonList(new Requirement("Defence", 80))));
         armours.add(new Armour("Mask of the Troll", "All", "Head", 40, 0, 0, 0, 0, new ArrayList<>()));
 
         //Magic head (done)
@@ -124,6 +122,85 @@ public class ArmourDatabase {
         armours.add(new Armour("Seasinger's hood", "Magic", "Head", 414, 280, 0, 0.0166, 0, Collections.singletonList(new Requirement("Defence", 85))));
         armours.add(new Armour("Tectonic mask", "Magic", "Head", 435, 0, 2, 0, 23, Collections.singletonList(new Requirement("Defence", 90))));
         armours.add(new Armour("Elite tectonic mask", "Magic", "Head", 457, 0, 2, 0, 24, Collections.singletonList(new Requirement("Defence", 92))));
+
+        //Necromancy
+        armours.add(new Armour("Deathwarden robes (tier 10)", "Necromancy", "Head", 40, 100, 0, 0, 0, Arrays.asList(new Requirement("Defence", 1), new Requirement("Necromancy", 1))));
+        armours.add(new Armour("Deathwarden robes (tier 10)", "Necromancy", "Torso", 46, 150, 0, 0, 0, Arrays.asList(new Requirement("Defence", 1), new Requirement("Necromancy", 1))));
+        armours.add(new Armour("Deathwarden robes (tier 10)", "Necromancy", "Legs", 44, 150, 0, 0, 0, Arrays.asList(new Requirement("Defence", 1), new Requirement("Necromancy", 1))));
+        armours.add(new Armour("Deathwarden robes (tier 10)", "Necromancy", "Hands", 10, 50, 0, 0, 0, Arrays.asList(new Requirement("Defence", 1), new Requirement("Necromancy", 1))));
+        armours.add(new Armour("Deathwarden robes (tier 10)", "Necromancy", "Feet", 10, 50, 0, 0, 0, Arrays.asList(new Requirement("Defence", 1), new Requirement("Necromancy", 1))));
+
+        armours.add(new Armour("Deathwarden robes (tier 20)", "Necromancy", "Head", 63, 200, 0, 0, 0, Arrays.asList(new Requirement("Defence", 20), new Requirement("Necromancy", 20))));
+        armours.add(new Armour("Deathwarden robes (tier 20)", "Necromancy", "Torso", 72, 300, 0, 0, 0, Arrays.asList(new Requirement("Defence", 20), new Requirement("Necromancy", 20))));
+        armours.add(new Armour("Deathwarden robes (tier 20)", "Necromancy", "Legs", 69, 300, 0, 0, 0, Arrays.asList(new Requirement("Defence", 20), new Requirement("Necromancy", 20))));
+        armours.add(new Armour("Deathwarden robes (tier 20)", "Necromancy", "Hands", 15, 100, 0, 0, 0, Arrays.asList(new Requirement("Defence", 20), new Requirement("Necromancy", 20))));
+        armours.add(new Armour("Deathwarden robes (tier 20)", "Necromancy", "Feet", 15, 100, 0, 0, 0, Arrays.asList(new Requirement("Defence", 20), new Requirement("Necromancy", 20))));
+
+        armours.add(new Armour("Deathwarden robes (tier 30)", "Necromancy", "Head", 90, 300, 0, 0, 0, Arrays.asList(new Requirement("Defence", 30), new Requirement("Necromancy", 30))));
+        armours.add(new Armour("Deathwarden robes (tier 30)", "Necromancy", "Torso", 104, 450, 0, 0, 0, Arrays.asList(new Requirement("Defence", 30), new Requirement("Necromancy", 30))));
+        armours.add(new Armour("Deathwarden robes (tier 30)", "Necromancy", "Legs", 99, 450, 0, 0, 0, Arrays.asList(new Requirement("Defence", 30), new Requirement("Necromancy", 30))));
+        armours.add(new Armour("Deathwarden robes (tier 30)", "Necromancy", "Hands", 22, 150, 0, 0, 0, Arrays.asList(new Requirement("Defence", 30), new Requirement("Necromancy", 30))));
+        armours.add(new Armour("Deathwarden robes (tier 30)", "Necromancy", "Feet", 22, 150, 0, 0, 0, Arrays.asList(new Requirement("Defence", 30), new Requirement("Necromancy", 30))));
+
+        armours.add(new Armour("Deathwarden robes (tier 40)", "Necromancy", "Head", 125, 400, 0, 0, 0, Arrays.asList(new Requirement("Defence", 40), new Requirement("Necromancy", 40))));
+        armours.add(new Armour("Deathwarden robes (tier 40)", "Necromancy", "Torso", 144, 600, 0, 0, 0, Arrays.asList(new Requirement("Defence", 40), new Requirement("Necromancy", 40))));
+        armours.add(new Armour("Deathwarden robes (tier 40)", "Necromancy", "Legs", 138, 600, 0, 0, 0, Arrays.asList(new Requirement("Defence", 40), new Requirement("Necromancy", 40))));
+        armours.add(new Armour("Deathwarden robes (tier 40)", "Necromancy", "Hands", 31, 200, 0, 0, 0, Arrays.asList(new Requirement("Defence", 40), new Requirement("Necromancy", 40))));
+        armours.add(new Armour("Deathwarden robes (tier 40)", "Necromancy", "Feet", 31, 200, 0, 0, 0, Arrays.asList(new Requirement("Defence", 40), new Requirement("Necromancy", 40))));
+
+        armours.add(new Armour("Deathwarden robes (tier 50)", "Necromancy", "Head", 170, 500, 0, 0, 0, Arrays.asList(new Requirement("Defence", 50), new Requirement("Necromancy", 50), new Requirement("Cooking", 20), new Requirement("Slayer", 32))));
+        armours.add(new Armour("Deathwarden robes (tier 50)", "Necromancy", "Torso", 195, 750, 0, 0, 0, Arrays.asList(new Requirement("Defence", 50), new Requirement("Necromancy", 50), new Requirement("Cooking", 20), new Requirement("Slayer", 32))));
+        armours.add(new Armour("Deathwarden robes (tier 50)", "Necromancy", "Legs", 187, 750, 0, 0, 0, Arrays.asList(new Requirement("Defence", 50), new Requirement("Necromancy", 50), new Requirement("Cooking", 20), new Requirement("Slayer", 32))));
+        armours.add(new Armour("Deathwarden robes (tier 50)", "Necromancy", "Hands", 42, 250, 0, 0, 0, Arrays.asList(new Requirement("Defence", 50), new Requirement("Necromancy", 50), new Requirement("Cooking", 20), new Requirement("Slayer", 32))));
+        armours.add(new Armour("Deathwarden robes (tier 50)", "Necromancy", "Feet", 42, 250, 0, 0, 0, Arrays.asList(new Requirement("Defence", 50), new Requirement("Necromancy", 50), new Requirement("Cooking", 20), new Requirement("Slayer", 32))));
+
+        armours.add(new Armour("Deathwarden robes (tier 60)", "Necromancy", "Head", 226, 600, 0, 0, 0, Arrays.asList(new Requirement("Defence", 60), new Requirement("Necromancy", 60))));
+        armours.add(new Armour("Deathwarden robes (tier 60)", "Necromancy", "Torso", 260, 900, 0, 0, 0, Arrays.asList(new Requirement("Defence", 60), new Requirement("Necromancy", 60))));
+        armours.add(new Armour("Deathwarden robes (tier 60)", "Necromancy", "Legs", 249, 900, 0, 0, 0, Arrays.asList(new Requirement("Defence", 60), new Requirement("Necromancy", 60))));
+        armours.add(new Armour("Deathwarden robes (tier 60)", "Necromancy", "Hands", 56, 300, 0, 0, 0, Arrays.asList(new Requirement("Defence", 60), new Requirement("Necromancy", 60))));
+        armours.add(new Armour("Deathwarden robes (tier 60)", "Necromancy", "Feet", 56, 300, 0, 0, 0, Arrays.asList(new Requirement("Defence", 60), new Requirement("Necromancy", 60))));
+
+        armours.add(new Armour("Deathwarden robes (tier 70)", "Necromancy", "Head", 297, 700, 0, 0, 0, Arrays.asList(new Requirement("Defence", 70), new Requirement("Necromancy", 70))));
+        armours.add(new Armour("Deathwarden robes (tier 70)", "Necromancy", "Torso", 341, 1050, 0, 0, 0, Arrays.asList(new Requirement("Defence", 70), new Requirement("Necromancy", 70))));
+        armours.add(new Armour("Deathwarden robes (tier 70)", "Necromancy", "Legs", 326, 1050, 0, 0, 0, Arrays.asList(new Requirement("Defence", 70), new Requirement("Necromancy", 70))));
+        armours.add(new Armour("Deathwarden robes (tier 70)", "Necromancy", "Hands", 74, 350, 0, 0, 0, Arrays.asList(new Requirement("Defence", 70), new Requirement("Necromancy", 70))));
+        armours.add(new Armour("Deathwarden robes (tier 70)", "Necromancy", "Feet", 74, 350, 0, 0, 0, Arrays.asList(new Requirement("Defence", 70), new Requirement("Necromancy", 70))));
+
+        armours.add(new Armour("Deathwarden robes (tier 80)", "Necromancy", "Head", 384, 800, 0, 0, 0, Arrays.asList(new Requirement("Defence", 80), new Requirement("Necromancy", 80), new Requirement("Agility", 70), new Requirement("Constitution", 70), new Requirement("Ranged", 70), new Requirement("Strength", 70))));
+        armours.add(new Armour("Deathwarden robes (tier 80)", "Necromancy", "Torso", 442, 1200, 0, 0, 0, Arrays.asList(new Requirement("Defence", 80), new Requirement("Necromancy", 80), new Requirement("Agility", 70), new Requirement("Constitution", 70), new Requirement("Ranged", 70), new Requirement("Strength", 70))));
+        armours.add(new Armour("Deathwarden robes (tier 80)", "Necromancy", "Legs", 423, 1200, 0, 0, 0, Arrays.asList(new Requirement("Defence", 80), new Requirement("Necromancy", 80), new Requirement("Agility", 70), new Requirement("Constitution", 70), new Requirement("Ranged", 70), new Requirement("Strength", 70))));
+        armours.add(new Armour("Deathwarden robes (tier 80)", "Necromancy", "Hands", 96, 400, 0, 0, 0, Arrays.asList(new Requirement("Defence", 80), new Requirement("Necromancy", 80), new Requirement("Agility", 70), new Requirement("Constitution", 70), new Requirement("Ranged", 70), new Requirement("Strength", 70))));
+        armours.add(new Armour("Deathwarden robes (tier 80)", "Necromancy", "Feet", 96, 400, 0, 0, 0, Arrays.asList(new Requirement("Defence", 80), new Requirement("Necromancy", 80), new Requirement("Agility", 70), new Requirement("Constitution", 70), new Requirement("Ranged", 70), new Requirement("Strength", 70))));
+
+        armours.add(new Armour("Deathwarden robes (tier 90)", "Necromancy", "Head", 491, 900, 0, 0, 0, Arrays.asList(new Requirement("Defence", 90), new Requirement("Necromancy", 1), new Requirement("Archaeology", 20), new Requirement("Attack", 80), new Requirement("Magic", 80), new Requirement("Prayer", 80), new Requirement("Ranged", 80), new Requirement("Runecrafting", 60))));
+        armours.add(new Armour("Deathwarden robes (tier 90)", "Necromancy", "Torso", 565, 1350, 0, 0, 0, Arrays.asList(new Requirement("Defence", 90), new Requirement("Necromancy", 1), new Requirement("Archaeology", 20), new Requirement("Attack", 80), new Requirement("Magic", 80), new Requirement("Prayer", 80), new Requirement("Ranged", 80), new Requirement("Runecrafting", 60))));
+        armours.add(new Armour("Deathwarden robes (tier 90)", "Necromancy", "Legs", 540, 1350, 0, 0, 0, Arrays.asList(new Requirement("Defence", 90), new Requirement("Necromancy", 1), new Requirement("Archaeology", 20), new Requirement("Attack", 80), new Requirement("Magic", 80), new Requirement("Prayer", 80), new Requirement("Ranged", 80), new Requirement("Runecrafting", 60))));
+        armours.add(new Armour("Deathwarden robes (tier 90)", "Necromancy", "Hands", 122, 450, 0, 0, 0, Arrays.asList(new Requirement("Defence", 90), new Requirement("Necromancy", 1), new Requirement("Archaeology", 20), new Requirement("Attack", 80), new Requirement("Magic", 80), new Requirement("Prayer", 80), new Requirement("Ranged", 80), new Requirement("Runecrafting", 60))));
+        armours.add(new Armour("Deathwarden robes (tier 90)", "Necromancy", "Feet", 122, 450, 0, 0, 0, Arrays.asList(new Requirement("Defence", 90), new Requirement("Necromancy", 1), new Requirement("Archaeology", 20), new Requirement("Attack", 80), new Requirement("Magic", 80), new Requirement("Prayer", 80), new Requirement("Ranged", 80), new Requirement("Runecrafting", 60))));
+
+        armours.add(new Armour("Deathdealer robes (tier 70)", "Necromancy", "Head", 259, 0, 0, 0, 17, Arrays.asList(new Requirement("Defence", 70), new Requirement("Necromancy", 70))));
+        armours.add(new Armour("Deathdealer robes (tier 70)", "Necromancy", "Torso", 298, 0, 0, 0, 26, Arrays.asList(new Requirement("Defence", 70), new Requirement("Necromancy", 70))));
+        armours.add(new Armour("Deathdealer robes (tier 70)", "Necromancy", "Legs", 285, 0, 0, 0, 22, Arrays.asList(new Requirement("Defence", 70), new Requirement("Necromancy", 70))));
+        armours.add(new Armour("Deathdealer robes (tier 70)", "Necromancy", "Hands", 64, 0, 0, 0, 11, Arrays.asList(new Requirement("Defence", 70), new Requirement("Necromancy", 70))));
+        armours.add(new Armour("Deathdealer robes (tier 70)", "Necromancy", "Feet", 64, 0, 0, 0, 11, Arrays.asList(new Requirement("Defence", 70), new Requirement("Necromancy", 70))));
+
+        armours.add(new Armour("Deathdealer robes (tier 80)", "Necromancy", "Head", 338, 0, 0, 0, 20, Arrays.asList(new Requirement("Defence", 80), new Requirement("Necromancy", 80), new Requirement("Ranged", 70), new Requirement("Strength", 70), new Requirement("Summoning", 60))));
+        armours.add(new Armour("Deathdealer robes (tier 80)", "Necromancy", "Torso", 389, 0, 0, 0, 30, Arrays.asList(new Requirement("Defence", 80), new Requirement("Necromancy", 80), new Requirement("Ranged", 70), new Requirement("Strength", 70), new Requirement("Summoning", 60))));
+        armours.add(new Armour("Deathdealer robes (tier 80)", "Necromancy", "Legs", 372, 0, 0, 0, 25, Arrays.asList(new Requirement("Defence", 80), new Requirement("Necromancy", 80), new Requirement("Ranged", 70), new Requirement("Strength", 70), new Requirement("Summoning", 60))));
+        armours.add(new Armour("Deathdealer robes (tier 80)", "Necromancy", "Hands", 84, 0, 0, 0, 12, Arrays.asList(new Requirement("Defence", 80), new Requirement("Necromancy", 80), new Requirement("Ranged", 70), new Requirement("Strength", 70), new Requirement("Summoning", 60))));
+        armours.add(new Armour("Deathdealer robes (tier 80)", "Necromancy", "Feet", 84, 0, 0, 0, 12, Arrays.asList(new Requirement("Defence", 80), new Requirement("Necromancy", 80), new Requirement("Ranged", 70), new Requirement("Strength", 70), new Requirement("Summoning", 60))));
+
+        armours.add(new Armour("Deathdealer robes (tier 90)", "Necromancy", "Head", 435, 0, 0, 0, 23, Arrays.asList(new Requirement("Defence", 90), new Requirement("Necromancy", 90))));
+        armours.add(new Armour("Deathdealer robes (tier 90)", "Necromancy", "Torso", 500, 0, 0, 0, 34, Arrays.asList(new Requirement("Defence", 90), new Requirement("Necromancy", 90))));
+        armours.add(new Armour("Deathdealer robes (tier 90)", "Necromancy", "Legs", 479, 0, 0, 0, 29, Arrays.asList(new Requirement("Defence", 90), new Requirement("Necromancy", 90))));
+        armours.add(new Armour("Deathdealer robes (tier 90)", "Necromancy", "Hands", 108, 0, 0, 0, 14, Arrays.asList(new Requirement("Defence", 90), new Requirement("Necromancy", 90))));
+        armours.add(new Armour("Deathdealer robes (tier 90)", "Necromancy", "Feet", 108, 0, 0, 0, 14, Arrays.asList(new Requirement("Defence", 90), new Requirement("Necromancy", 90))));
+
+        armours.add(new Armour("Crown of the First Necromancer", "Necromancy", "Head", 491, 0, 0, 0, 23, Arrays.asList(new Requirement("Defence", 95), new Requirement("Necromancy", 95))));
+        armours.add(new Armour("Robe top of the First Necromancer", "Necromancy", "Torso", 565, 0, 0, 0, 34, Arrays.asList(new Requirement("Defence", 95), new Requirement("Necromancy", 95))));
+        armours.add(new Armour("Robe bottom of the First Necromancer", "Necromancy", "Legs", 540, 0, 0, 0, 29, Arrays.asList(new Requirement("Defence", 95), new Requirement("Necromancy", 95))));
+        armours.add(new Armour("Hand wrap of the First Necromancer", "Necromancy", "Hands", 122, 0, 0, 0, 14, Arrays.asList(new Requirement("Defence", 95), new Requirement("Necromancy", 95))));
+        armours.add(new Armour("Foot wraps of the First Necromancer", "Necromancy", "Feet", 122, 0, 0, 0, 14, Arrays.asList(new Requirement("Defence", 95), new Requirement("Necromancy", 95))));
 
         //Melee torso (done)
         armours.add(new Armour("Bronze platebody", "Melee", "Torso", 34, 0, 0, 0.001, 0, new ArrayList<>()));
@@ -446,6 +523,7 @@ public class ArmourDatabase {
         armours.add(new Armour("Gud raider shield", "Melee", "Shield", 196, 0, 0, 0.055, 0, Collections.singletonList(new Requirement("Defence", 55))));
         armours.add(new Armour("Toktz-ket-xil", "Melee", "Shield", 226, 0, 0, 0.06, 0, Collections.singletonList(new Requirement("Defence", 60))));
         armours.add(new Armour("Third age kiteshield", "Melee", "Shield", 259, 0, 0, 0.065, 0, Collections.singletonList(new Requirement("Defence", 65))));
+        armours.add(new Armour("Dragonfire shield", "Melee", "Shield", 297, 0, 0, 0.07, 0, Collections.singletonList(new Requirement("Defence", 70))));
         armours.add(new Armour("Bandos warshield", "Melee", "Shield", 297, 35, 1, 0.07, 0, Collections.singletonList(new Requirement("Defence", 70))));
         armours.add(new Armour("Divine spirit shield", "Melee", "Shield", 338, 0, 3, 0.075, 0, Arrays.asList(new Requirement("Defence", 75), new Requirement("Prayer", 75))));
         armours.add(new Armour("Linza's shield", "Melee", "Shield", 384, 385, 0, 0.08, 0, Collections.singletonList(new Requirement("Defence", 80))));
@@ -461,7 +539,7 @@ public class ArmourDatabase {
         armours.add(new Armour("Blue dragonhide shield", "Ranged", "Shield", 170, 0, 0, 0.05, 0, Collections.singletonList(new Requirement("Defence", 50))));
         armours.add(new Armour("Red dragonhide shield", "Ranged", "Shield", 196, 0, 0, 0.055, 0, Collections.singletonList(new Requirement("Defence", 55))));
         armours.add(new Armour("Black dragonhide shield", "Ranged", "Shield", 226, 0, 0, 0.06, 0, Collections.singletonList(new Requirement("Defence", 60))));
-        armours.add(new Armour("Dragonfire deflector", "Ranged", "Shield", 297, 35, 0, 0.07, 0, Collections.singletonList(new Requirement("Defence", 70))));
+        armours.add(new Armour("Dragonfire deflector", "Ranged", "Shield", 297, 0, 0, 0.07, 0, Collections.singletonList(new Requirement("Defence", 70))));
         armours.add(new Armour("Crystal deflector", "Ranged", "Shield", 297, 35, 0, 0.07, 0, Arrays.asList(new Requirement("Defence", 70), new Requirement("Agility", 56),
             new Requirement("Crafting", 10), new Requirement("Ranged", 25))));
         armours.add(new Armour("Elysian spirit shield", "Ranged", "Shield", 338, 0, 3, 0.075, 0, Arrays.asList(new Requirement("Defence", 75), new Requirement("Prayer", 75))));
@@ -477,9 +555,14 @@ public class ArmourDatabase {
         armours.add(new Armour("Dragon ward", "Magic", "Shield", 226, 0, 0, 0.06, 0, Arrays.asList(new Requirement("Defence", 60), new Requirement("Magic", 60))));
         armours.add(new Armour("Crystal ward", "Magic", "Shield", 297, 35, 0, 0.07, 0, Arrays.asList(new Requirement("Defence", 70), new Requirement("Agility", 56),
             new Requirement("Crafting", 10), new Requirement("Ranged", 25))));
+        armours.add(new Armour("Dragonfire ward", "Magic", "Shield", 297, 0, 0, 0.07, 0, Collections.singletonList(new Requirement("Defence", 70))));
         armours.add(new Armour("Ward of subjugation", "Magic", "Shield", 297, 35, 1, 0.07, 0, Collections.singletonList(new Requirement("Defence", 70))));
-        armours.add(new Armour("Spectral spirit shield", "Magic", "Shield", 338, 210, 3, 0.075, 0, Arrays.asList(new Requirement("Defence", 75), new Requirement("Prayer", 75))));
+        armours.add(new Armour("Arcane spirit shield", "Magic", "Shield", 338, 0, 3, 0.075, 0, Arrays.asList(new Requirement("Defence", 75), new Requirement("Prayer", 75))));
         armours.add(new Armour("Merciless kiteshield", "Magic", "Shield", 491, 735, 0, 0.09, 0, Collections.singletonList(new Requirement("Defence", 90))));
+
+        //Necromancy shield
+        armours.add(new Armour("Dragonfire shroud", "Necromancy", "Shield", 297, 0, 0, 0.07, 0, Collections.singletonList(new Requirement("Defence", 70))));
+        armours.add(new Armour("Spectral spirit shield", "Necromancy", "Shield", 338, 0, 3, 0.075, 0, Arrays.asList(new Requirement("Defence", 75), new Requirement("Prayer", 75))));
 
         //Neck (done)
         armours.add(new Armour("Amulet of defence", "All", "Neck", 6, 0, 0, 0, 8, Collections.singletonList(new Requirement("Defence", 20))));
@@ -492,6 +575,10 @@ public class ArmourDatabase {
         armours.add(new Armour("Saradomin's hiss", "Magic", "Neck", 0, 0, 2, 0, 36, Collections.singletonList(new Requirement("Magic", 70))));
         armours.add(new Armour("Amulet of the forsaken", "All", "Neck", 0, 0, 3, 0, 36, new ArrayList<>()));
         armours.add(new Armour("Amulet of souls", "All", "Neck", 0, 0, 5, 0, 46, new ArrayList<>()));
+        armours.add(new Armour("Amulet of souls (or)", "All", "Neck", 0, 0, 5, 0, 48, new ArrayList<>()));
+        armours.add(new Armour("Essence of Finality amulet", "All", "Neck", 0, 0, 7, 0, 56, new ArrayList<>()));
+        armours.add(new Armour("Essence of Finality amulet (or)", "All", "Neck", 0, 0, 7, 0, 59, new ArrayList<>()));
+        armours.add(new Armour("Conjurer's raising amulet", "Necromancy", "Neck", 0, 0, 0, 0, 44, new ArrayList<>()));
 
         //Ring (done)
         armours.add(new Armour("Ring of wealth", "All", "Ring", 0, 0, 0, 0, 10, new ArrayList<>()));
@@ -500,9 +587,17 @@ public class ArmourDatabase {
         armours.add(new Armour("Warrior ring", "Melee", "Ring", 0, 0, 0, 0, 17, new ArrayList<>()));
         armours.add(new Armour("Archers' ring", "Ranged", "Ring", 0, 0, 0, 0, 17, new ArrayList<>()));
         armours.add(new Armour("Seers' ring", "Magic", "Ring", 0, 0, 0, 0, 17, new ArrayList<>()));
+        armours.add(new Armour("Zorgoth's ring", "Necromancy", "Ring", 0, 0, 0, 0, 25, new ArrayList<>()));
+        armours.add(new Armour("Sixth-Age circuit", "All", "Ring", 12, 0, 0, 0, 21, new ArrayList<>()));
         armours.add(new Armour("Luck of the dwarves", "All", "Ring", 0, 0, 0, 0, 17, new ArrayList<>()));
         armours.add(new Armour("Hazelmere's signet ring", "All", "Ring", 0, 0, 0, 0, 21, new ArrayList<>()));
         armours.add(new Armour("Ring of death", "All", "Ring", 0, 0, 3, 0, 25, new ArrayList<>()));
+        armours.add(new Armour("Reaver's ring", "All", "Ring", 17, 0, 5, 0, 27, new ArrayList<>()));
+        armours.add(new Armour("Champion's ring", "Melee", "Ring", 0, 0, 5, 0, 30, new ArrayList<>()));
+        armours.add(new Armour("Stalker's ring", "Ranged", "Ring", 0, 0, 5, 0, 30, new ArrayList<>()));
+        armours.add(new Armour("Channellers's ring", "Mage", "Ring", 0, 0, 5, 0, 30, new ArrayList<>()));
+        armours.add(new Armour("Zorgoth's soul ring", "Necromancy", "Ring", 0, 0, 5, 0, 30, new ArrayList<>()));
+        armours.add(new Armour("Occultist's ring", "Necromancy", "Ring", 0, 0, 5, 0, 30, new ArrayList<>()));
 
         //Cape (done)
         armours.add(new Armour("Bladestorm drape", "Melee", "Cape", 4, 0, 0, 0, 1, new ArrayList<>()));
@@ -522,7 +617,14 @@ public class ArmourDatabase {
                 new Requirement("Construction", 99), new Requirement("Summoning", 99), new Requirement("Dungeoneering", 99), new Requirement("Divination", 99), new Requirement("Invention", 99))));
         armours.add(new Armour("TokHaar-Kal-Mej", "Magic", "Cape", 44, 0, 2, 0, 33, Arrays.asList(new Requirement("Magic", 75), new Requirement("Agility", 60), new Requirement("Mining", 41))));
         armours.add(new Armour("TokHaar-Kal-Ket", "Melee", "Cape", 44, 0, 2, 0, 33, Arrays.asList(new Requirement("Magic", 75), new Requirement("Agility", 60), new Requirement("Mining", 41))));
-        armours.add(new Armour("TokHaar-Kal-Xil", "Ranged", "Cape", 44, 0, 2, 0, 33, Arrays.asList(new Requirement("Magic", 75), new Requirement("Agility", 60), new Requirement("Mining", 41))));armours.add(new Armour("Abomination cape", "Melee", "Cape", 50, 0, 0, 0, 28, Collections.singletonList(new Requirement("Defence", 75))));
+        armours.add(new Armour("TokHaar-Kal-Xil", "Ranged", "Cape", 44, 0, 2, 0, 33, Arrays.asList(new Requirement("Magic", 75), new Requirement("Agility", 60), new Requirement("Mining", 41))));
+        armours.add(new Armour("TokHaar-Kal-Mor", "Necromancy", "Cape", 44, 0, 2, 0, 33, Arrays.asList(new Requirement("Magic", 75), new Requirement("Agility", 60), new Requirement("Mining", 41))));
+        armours.add(new Armour("Igneous-Kal-Mej", "Magic", "Cape", 57, 0, 2, 0, 43, Arrays.asList(new Requirement("Magic", 75), new Requirement("Agility", 60), new Requirement("Mining", 41), new Requirement("Crafting", 90))));
+        armours.add(new Armour("Igneous-Kal-Ket", "Melee", "Cape", 57, 0, 2, 0, 43, Arrays.asList(new Requirement("Magic", 75), new Requirement("Agility", 60), new Requirement("Mining", 41), new Requirement("Crafting", 90))));
+        armours.add(new Armour("Igneous-Kal-Xil", "Ranged", "Cape", 57, 0, 2, 0, 43, Arrays.asList(new Requirement("Magic", 75), new Requirement("Agility", 60), new Requirement("Mining", 41), new Requirement("Crafting", 90))));
+        armours.add(new Armour("Igneous-Kal-Mor", "Necromancy", "Cape", 57, 0, 2, 0, 43, Arrays.asList(new Requirement("Magic", 75), new Requirement("Agility", 60), new Requirement("Mining", 41), new Requirement("Crafting", 90))));
+        armours.add(new Armour("Igneous-Kal-Zuk", "All", "Cape", 57, 0, 2, 0, 43, Arrays.asList(new Requirement("Magic", 75), new Requirement("Agility", 60), new Requirement("Mining", 41), new Requirement("Crafting", 90))));
+        armours.add(new Armour("Abomination cape", "Melee", "Cape", 50, 0, 0, 0, 28, Collections.singletonList(new Requirement("Defence", 75))));
         armours.add(new Armour("Reefwalker's cape", "All", "Cape", 62, 200, 0, 0, 9, Collections.singletonList(new Requirement("Defence", 85))));
 
         for (Armour armour : armours) {

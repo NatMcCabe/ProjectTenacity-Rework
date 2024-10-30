@@ -4,8 +4,8 @@ import data.databases.ActionDatabase;
 import logic.Player;
 import logic.Requirement;
 
-import java.util.Map;
 import java.util.List;
+import java.util.Map;
 
 public class Action {
 

@@ -4,17 +4,9 @@ import data.databases.AbilityDatabase;
 import data.databases.ArmourDatabase;
 import data.databases.FamiliarDatabase;
 import data.databases.WeaponDatabase;
-import data.dataobjects.Ability;
-import data.dataobjects.Armour;
-import data.dataobjects.Enemy;
-import data.dataobjects.Familiar;
-import data.dataobjects.Weapon;
+import data.dataobjects.*;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.LinkedHashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.util.stream.Collectors;
 
 public class Encounter {

@@ -3,28 +3,11 @@ package logic;
 
 import com.google.common.collect.ImmutableMap;
 import com.google.gson.annotations.Expose;
-import data.databases.AchievementDatabase;
-import data.databases.ActionDatabase;
-import data.databases.ArmourDatabase;
-import data.databases.FamiliarDatabase;
-import data.databases.WeaponDatabase;
-import data.dataobjects.Achievement;
-import data.dataobjects.Action;
-import data.dataobjects.Armour;
-import data.dataobjects.Enemy;
-import data.dataobjects.Familiar;
-import data.dataobjects.Weapon;
+import data.databases.*;
+import data.dataobjects.*;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.LinkedHashMap;
-import java.util.LinkedHashSet;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.util.Map.Entry;
-import java.util.Set;
 import java.util.stream.Collectors;
 
 public class Player {
@@ -33,12 +16,12 @@ public class Player {
     public static final LinkedHashSet<String> ALL_SKILLS = new LinkedHashSet<>(Arrays.asList("Attack", "Defence", "Strength", "Constitution",
         "Ranged", "Prayer", "Magic", "Cooking", "Woodcutting", "Fletching", "Fishing", "Firemaking", "Crafting", "Smithing", "Mining",
         "Herblore", "Agility", "Thieving", "Slayer", "Farming", "Runecrafting", "Hunter", "Construction", "Summoning",
-        "Dungeoneering", "Divination", "Invention", "Archaeology"));
+        "Dungeoneering", "Divination", "Invention", "Archaeology", "Necromancy"));
 
     public static final LinkedHashSet<String> PORTS_SKILLS = new LinkedHashSet<>(Arrays.asList("Agility", "Construction", "Cooking",
         "Divination", "Dungeoneering", "Fishing", "Herblore", "Hunter", "Prayer", "Runecrafting", "Slayer", "Thieving"));
 
-    private static final HashSet<String> COMBAT_STYLES = new HashSet<>(Arrays.asList("Melee", "Ranged", "Magic"));
+    private static final HashSet<String> COMBAT_STYLES = new HashSet<>(Arrays.asList("Melee", "Ranged", "Magic", "Necromancy"));
 
     @Expose private String name;
     @Expose private int status; //0 = mainscape, 1 = ironman, 2 = HCIM
@@ -146,7 +129,7 @@ public class Player {
 
     public Map<String, Double> nextGear(String combatStyle) {
         if (!COMBAT_STYLES.contains(combatStyle)) {
-            throw new IllegalArgumentException(String.format("Combat style provided was %s. Must be Melee, Ranged, or Magic.", combatStyle));
+            throw new IllegalArgumentException(String.format("Combat style provided was %s. Must be Melee, Ranged, Magic, or Necromancy.", combatStyle));
         }
         double minTimeToGear = 1000000000.0;
         String minGear = null;

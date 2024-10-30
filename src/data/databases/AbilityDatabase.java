@@ -1,7 +1,7 @@
 package data.databases;
 
-import logic.Requirement;
 import data.dataobjects.Ability;
+import logic.Requirement;
 
 import java.util.ArrayList;
 import java.util.Collections;

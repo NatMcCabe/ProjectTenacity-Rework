@@ -1,10 +1,6 @@
 package data.dataobjects;
 
-import logic.CombatParameters;
-import logic.CombatResults;
-import logic.Encounter;
-import logic.Player;
-import logic.Requirement;
+import logic.*;
 
 import java.util.List;
 
